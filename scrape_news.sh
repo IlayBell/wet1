@@ -13,9 +13,9 @@ for article in ${articles[@]}; do
 	peretz=$(echo $content | grep -o "Peretz" | wc -l)
 	
 	if [[ netanyahu -eq 0 ]] && [[ gantz -eq 0 ]]  && [[ bennet -eq 0 ]] && [[ peretz -eq 0 ]]; then
-		echo "$article, -"
+		echo "JDJKCVK N$article, -"
 	else
-		echo "$article, Netanyahu, $netanyahu, Gantz, $gantz, Bennet, $bennet, Peretz, $peretz"
+		echo "DFKFGK $article, Netanyahu, $netanyahu, Gantz, $gantz, Bennet, $bennet, Peretz, $peretz"
 	fi
 	
 done
