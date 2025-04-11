@@ -5,7 +5,7 @@ content=$(wget -q -O - "https://www.ynetnews.com/category/3082")
 articles=($(echo $content | grep -o -E "https://www.ynetnews.com/article/[a-zA-Z0-9]*" | sort | uniq))
 
 # Prints num of articles
-echo "${#articles[@]} " 
+echo "${#articles[@]}" 
 
 for article in ${articles[@]}; do
 	
