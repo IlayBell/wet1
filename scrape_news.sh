@@ -20,7 +20,7 @@ for article in ${articles[@]}; do
 	
 	# Print result accordin to format
 	if [[ netanyahu -eq 0 ]] && [[ gantz -eq 0 ]]  && [[ bennett -eq 0 ]] && [[ peretz -eq 0 ]]; then
-		echo "$article,-"
+		echo "$article, -"
 	else
 		echo "$article, Netanyahu, $netanyahu, Gantz, $gantz, Bennett, $bennett, Peretz, $peretz"
 	fi
