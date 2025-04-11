@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Gets a list of all articles from web
-content=$(wget -q -O - "https://www.ynetnews.com/category/3082")
-articles=($(echo $content | grep -o -E "https://www.ynetnews.com/article/[a-zA-Z0-9]*" | sort | uniq))
+
+articles=$(wget -q -O - "https://www.ynetnews.com/category/3082" | grep -o -E "https://www.ynetnews.com/article/[a-zA-Z0-9]*" | sort -u)
 
 # Prints num of articles
-echo "${#articles[@]}" 
+echo "$articles" | wc -l
 
-for article in ${articles[@]}; do
+for article in $articles; do
 	
 	# Reads an article
 	content=$(wget -q -O - $article)
